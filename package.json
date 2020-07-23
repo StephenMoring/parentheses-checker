@@ -2,7 +2,7 @@
   "name": "parentheses-checker",
   "version": "1.0.0",
   "description": "Verifies parentheses in LISP code are properly closed",
-  "main": "index.js",
+  "main": "runner.js",
   "type": "module",
   "scripts": {
     "start": "node runner.js",
@@ -23,5 +23,9 @@
     "@babel/preset-env": "^7.10.4",
     "babel-jest": "^26.1.0",
     "jest": "^26.1.0"
+  },
+  "dependencies": {
+    "node": "^14.5.0",
+    "npm": "^6.14.7"
   }
 }
