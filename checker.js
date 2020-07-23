@@ -1,4 +1,4 @@
-export function verifyParenthesesClosures(text){
+ export function verifyParenthesesClosures(text){
     const parenthesesStack = []; 
     for(const char of text){
         if (char === '('){
@@ -9,5 +9,6 @@ export function verifyParenthesesClosures(text){
             }
         }
     }
+    // if the array is empty, parentheses are closed properly, return true
     return !parenthesesStack.length;
 }

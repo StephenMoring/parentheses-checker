@@ -10,6 +10,13 @@ var fileToCheck = process.argv.pop();
 if(fileToCheck === undefined){
     fileToCheck = "test1.txt";
 }
-
-var text = readFileSync('./sample_input/' + fileToCheck).toString('utf-8');
-console.log(verifyParenthesesClosures(text));
+try{
+    var text = readFileSync('./sample_input/' + fileToCheck).toString('utf-8');
+    console.log(verifyParenthesesClosures(text));
+} catch (err) {
+    if (err.code === 'ENOENT') {
+        console.log('File not found!');
+    } else {
+        throw err;
+    }
+}
