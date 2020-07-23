@@ -1,13 +1,13 @@
 export function verifyParenthesesClosures(text){
-    let parenthesesStack = []; 
-    for(let c of text){
-        if (c === '('){
+    const parenthesesStack = []; 
+    for(const char of text){
+        if (char === '('){
             parenthesesStack.push('(');
-        } else if (c === ')'){
-            if(parenthesesStack.pop() === undefined){
+        } else if (char === ')'){
+            if(!parenthesesStack.pop()){
                 return false;
             }
         }
     }
-    return parenthesesStack.length == 0 ? true : false;
+    return !parenthesesStack.length;
 }
