@@ -1,6 +1,4 @@
-import { readFileSync } from "fs";
-
-export function checkParentheses(text){
+export function verifyParenthesesClosures(text){
     let parenthesesStack = []; 
     for(let c of text){
         if (c === '('){
@@ -13,6 +11,3 @@ export function checkParentheses(text){
     }
     return parenthesesStack.length == 0 ? true : false;
 }
-
-var text = readFileSync("./tests/test_lisp_code.txt").toString('utf-8');
-console.log(checkParentheses(text));
