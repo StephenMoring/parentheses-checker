@@ -9,5 +9,5 @@ if(fileToCheck === undefined){
     fileToCheck = "test_lisp_code.txt";
 }
 
-var text = readFileSync('./tests/' + fileToCheck).toString('utf-8');
+var text = readFileSync('./sample_input/' + fileToCheck).toString('utf-8');
 console.log(verifyParenthesesClosures(text));
