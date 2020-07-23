@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "start": "node runner.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/StephenMoring/parentheses-checker/issues"
   },
-  "homepage": "https://github.com/StephenMoring/parentheses-checker#readme"
+  "homepage": "https://github.com/StephenMoring/parentheses-checker#readme",
+  "devDependencies": {
+    "jest": "^26.1.0"
+  }
 }
